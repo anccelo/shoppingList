@@ -27,7 +27,6 @@ public class ProductController<T> {
 	@PostMapping
 	public boolean createProductCtrl(@RequestBody ProductEntity product) {
 		return productService.createProductService(product);
-
 	}
 
 }

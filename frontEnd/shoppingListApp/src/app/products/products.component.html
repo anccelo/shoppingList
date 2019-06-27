@@ -1,0 +1,11 @@
+<div>
+  <p>We are in {{ info.city}} and to day is {{ info.date|date:'dd/MM/yyyy' }} 
+    and it's {{ info.date|date:'HH:mm' }}  </p>
+  <h1>Products:</h1>
+    <ul>
+      <li *ngFor="let p of products">
+       id   = {{ p.id }},
+       name = {{ p.name }}
+      </li>
+    </ul>
+  </div>>
