@@ -17,9 +17,20 @@ export class ProductsComponent implements OnInit {
     {id: 234, name: 'latte'}
   ]
 
+  insertProducts = {id:null, name:''}
+
+  onAddProduct(){
+    this.products.push(this.insertProducts);
+    this.insertProducts = {id:null,name:''}
+  }
+
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
+    
 
 }
