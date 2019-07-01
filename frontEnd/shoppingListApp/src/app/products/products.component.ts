@@ -17,11 +17,12 @@ export class ProductsComponent implements OnInit {
     {id: 234, name: 'latte'}
   ]
 
-  insertProducts = {id:null, name:''}
+  newProduct = {id:null, name:''}
 
-  onAddProduct(){
-    this.products.push(this.insertProducts);
-    this.insertProducts = {id:null,name:''}
+  addProduct(prd){
+    this.products.push(prd);
+    this.newProduct={id:null, name:''}
+    
   }
 
 

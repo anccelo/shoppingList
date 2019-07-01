@@ -1,20 +1,22 @@
 <div class="container">
   <div class="panel-primary">
     Products
-      <div class="panel-body">
-        <p>We are in {{ info.city}} and to day is {{ info.date|date:'dd/MM/yyyy' }} 
-          and it's {{ info.date|date:'HH:mm' }}</p>
-        <ul class="list-group">
-          <li *ngFor="let p of products" class="list-group-item">
-          id   = {{ p.id }},
-          name = {{ p.name }}
-          </li>
-       </ul>
-     </div>
+    <div class="panel-body">
+      <p>We are in {{ info.city}} and to day is {{ info.date|date:'dd/MM/yyyy' }} and it's {{ info.date|date:'HH:mm' }}</p>
+      <ul class="list-group">
+        <li *ngFor="let p of products" class="list-group-item">
+          id = {{ p.id }}, name = {{ p.name }}
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="form-group">
-    <label class="control-label">message:</label>
-    <input type="text"  [(ngModel)] = "insertProducts.name" />
-    <button class="btn btn-primary" (click) = "onAddProduct()">Ajouter Product</button>
-  </div>
+  <form #f="ngForm" (ngSubmit)="addProduct(f.value)">
+    <div class="form-group">
+      <label class="control-label">new name product:</label>
+      <input required name="name" ngModel type="text" [(ngModel)]="newProduct.name" ><br/>
+      <label class="control-label">new id product:</label>
+      <input  name="id" ngModel type="number" [(ngModel)]="newProduct.id"  ><br/>
+      <button [disabled]="!f.valid" type="submit" class="btn btn-primary" >Insert</button>
+    </div>
+  </form>
 </div>
