@@ -10,13 +10,17 @@
       </ul>
     </div>
   </div>
-  <form #f="ngForm" (ngSubmit)="addProduct(f.value)">
-    <div class="form-group">
-      <label class="control-label">new name product:</label>
-      <input required name="name" ngModel type="text" [(ngModel)]="newProduct.name" ><br/>
-      <label class="control-label">new id product:</label>
-      <input  name="id" ngModel type="number" [(ngModel)]="newProduct.id"  ><br/>
-      <button [disabled]="!f.valid" type="submit" class="btn btn-primary" >Insert</button>
-    </div>
-  </form>
+
+    <form #f="ngForm" (ngSubmit)="addProduct(f.value)">
+      <div class="form-group">
+        <label class="control-label">new name product:</label>
+        <input required name="name" ngModel type="text" [(ngModel)]="newProduct.name">
+        <br/>
+        <label class="control-label">new id product:</label>
+        <input name="id" ngModel type="number" [(ngModel)]="newProduct.id">
+        <br/>
+        <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Insert</button>
+      </div>
+    </form>
+
 </div>
