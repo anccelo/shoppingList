@@ -5,6 +5,18 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../services/product.service';
+import {RouterModule, Routes} from '@angular/router';
+
+
+const appRoutes: Routes =[ 
+  { path: 'products', component: ProductsComponent},
+  { path: '',
+    redirectTo: '',
+    pathMatch:'full'
+  }
+];
+
+
 
 @NgModule({
   declarations: [
@@ -12,7 +24,7 @@ import { ProductService } from '../services/product.service';
     ProductsComponent
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule,RouterModule.forRoot(appRoutes)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
