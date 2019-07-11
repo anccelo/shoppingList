@@ -3,6 +3,7 @@ package com.angelolagreca.shoppinglist.product.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import com.angelolagreca.shoppinglist.product.entity.ProductEntity;
 import com.angelolagreca.shoppinglist.product.service.ProductService;
 
 @RestController
+@CrossOrigin
 @RequestMapping(value = "/product", produces = { "application/json" })
 public class ProductController<T> {
 

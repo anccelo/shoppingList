@@ -5,7 +5,11 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../services/product.service';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 
 const appRoutes: Routes =[ 
@@ -24,7 +28,7 @@ const appRoutes: Routes =[
     ProductsComponent
   ],
   imports: [
-    BrowserModule,FormsModule,RouterModule.forRoot(appRoutes)
+    BrowserModule,FormsModule,RouterModule.forRoot(appRoutes),HttpClientModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

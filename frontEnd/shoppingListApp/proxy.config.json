@@ -1,0 +1,9 @@
+{
+    "/api/*":{
+        "target":"http://lfr024384.corp.capgemini.com:7701",
+        "secure": false,
+        "logLevel": "debug", 
+        "changeOrigin": true
+    }
+        
+}
